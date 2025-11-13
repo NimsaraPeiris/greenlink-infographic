@@ -29,16 +29,16 @@ function ObjectivesSection() {
   ];
 
   return (
-    <section className="py-12 sm:py-16">
-      <h2 className="text-4xl font-extrabold text-[#004AAD] text-center mb-12">Project Report Card: Objectives Fulfilled</h2>
-      <p className="text-xl text-slate-600 text-center max-w-3xl mx-auto mb-12">
+    <section className="py-6 sm:py-12 md:py-16 px-3 sm:px-4">
+      <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#004AAD] text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12 leading-tight px-1 sm:px-2">Project Report Card: Objectives Fulfilled</h2>
+      <p className="text-sm xs:text-base sm:text-lg md:text-xl text-slate-600 text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-relaxed px-1 sm:px-2">
         This section outlines the six primary objectives set for the GreenLink project. We successfully achieved all targets, moving from theoretical research to a fully functional and validated system.
       </p>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
         {objectives.map((objective, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#00A97F]">
-            <strong className="text-lg text-[#004AAD]">{objective.title}</strong>
-            <p className="text-slate-600 mt-2">{objective.description}</p>
+          <div key={index} className="bg-white rounded-lg sm:rounded-xl shadow-lg p-3 sm:p-5 md:p-6 border-l-4 border-[#00A97F] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <strong className="text-sm xs:text-base sm:text-lg text-[#004AAD] block mb-1.5 sm:mb-2 leading-snug">{objective.title}</strong>
+            <p className="text-xs xs:text-sm sm:text-base text-slate-600 mt-1.5 sm:mt-2 leading-relaxed">{objective.description}</p>
           </div>
         ))}
       </div>

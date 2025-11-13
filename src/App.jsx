@@ -10,8 +10,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="text-slate-800">
-      <main className="max-w-6xl mx-auto p-4 sm:p-8">
+    <div className="text-slate-800 min-h-screen overflow-x-hidden w-full">
+      <main className="w-full px-3 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 overflow-x-hidden">
         <Header />
         <ProblemSection />
         <SolutionSection />
