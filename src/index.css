@@ -146,6 +146,39 @@ body {
     }
 }
 
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @keyframes pulse {
     0%, 100% {
         opacity: 1;
@@ -153,6 +186,44 @@ body {
     50% {
         opacity: 0.8;
     }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
 }
 
 /* Smooth focus states for accessibility */
@@ -182,12 +253,13 @@ button:active, a:active {
     box-shadow: 0 12px 24px -8px rgba(0, 74, 173, 0.3);
 }
 
-/* Gradient text effect */
+/* Gradient text effect - Green and Black theme */
 .gradient-text {
-    background: linear-gradient(135deg, #004AAD 0%, #00A97F 100%);
+    background: linear-gradient(135deg, #000000 0%, #00A97F 50%, #00D9A5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* static gradient text — animation removed */
 }
 
 /* Smooth scrolling */
